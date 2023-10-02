@@ -36,8 +36,10 @@ a {
   transform: translateY(-8px) rotate(-45deg);
 }
 .nav {
-  position: fixed;
   position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -96,12 +98,14 @@ a {
 //footer
 
 .footer {
+  margin-top: 10em; /// remember ********************************
   &__top {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 4em 0;
+
     &-logo {
       display: flex;
       align-items: center;
@@ -117,7 +121,7 @@ a {
     &-box {
       display: flex;
       justify-content: space-around;
-      width: 100%;
+      max-width: 100%;
       margin: 2em 0;
       &--line {
         border: 1px solid rgba(128, 128, 128, 0.281);
@@ -127,12 +131,14 @@ a {
       display: flex;
       align-items: center;
       font-size: 3rem;
+      margin: 0 0.1em 0 0;
       .fa-brands {
         margin: 0 0.3em;
       }
     }
     &-addres {
       font-size: 1.2rem;
+      margin: 0 0 0 1em;
       p {
         margin: 0.2em 0;
       }
@@ -161,7 +167,6 @@ a {
     }
   }
   &__bottom {
-    width: 100%;
     &-line {
       position: relative;
       text-align: center;
@@ -171,7 +176,7 @@ a {
     }
     &-line::before {
       content: "";
-      width: 110px;
+      min-width: 35%;
       height: 1px;
       background: colors.$light-gray;
       left: 0;
@@ -180,7 +185,7 @@ a {
     }
     &-line::after {
       content: "";
-      width: 110px;
+      min-width: 35%;
       height: 1px;
       background: colors.$light-gray;
       right: 0;
@@ -196,7 +201,7 @@ a {
     }
     &-line2::before {
       content: "";
-      width: 68px;
+      min-width: 22%;
       height: 1px;
       background: colors.$light-gray;
       left: 0;
@@ -205,7 +210,7 @@ a {
     }
     &-line2::after {
       content: "";
-      width: 68px;
+      min-width: 22%;
       height: 1px;
       background: colors.$light-gray;
       right: 0;

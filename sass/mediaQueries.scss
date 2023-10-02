@@ -1,0 +1,131 @@
+@use "./colors";
+
+//nav + wrapper
+
+@media (min-width: 768px) {
+  .nav {
+    justify-content: space-around;
+    &__burger {
+      display: none;
+    }
+    &__items {
+      top: 0;
+      position: relative;
+      flex-direction: row;
+    }
+    &__item {
+      display: block;
+      color: colors.$white;
+      margin: 0 1.5em;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    margin: 0 6em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .wrapper {
+    margin: 0 10em;
+  }
+}
+
+//footer
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    &__top {
+      width: 50%;
+      &-logo {
+        width: 335px;
+        height: 83px;
+      }
+
+      &-icons {
+        margin: 0 1em 0 0;
+      }
+      &-addres {
+        margin: 0 0 0 3em;
+      }
+    }
+    &__bottom {
+      width: 40%;
+      &-line {
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        color: colors.$light-gray;
+        margin: 1.5em 0;
+      }
+      &-line::before {
+        content: "";
+        min-width: 35%;
+        height: 1px;
+        background: colors.$light-gray;
+        left: 0;
+        top: 50%;
+        position: absolute;
+      }
+      &-line::after {
+        content: "";
+        min-width: 35%;
+        height: 1px;
+        background: colors.$light-gray;
+        right: 0;
+        top: 50%;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    &__top {
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    &__top {
+      width: 30%;
+      margin: 0 15em;
+      &-logo {
+        max-width: 394px;
+        max-height: 85px;
+      }
+      &-button {
+        width: 257px;
+        height: 55px;
+      }
+    }
+    &__bottom {
+      width: 30%;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer {
+    &__top {
+      margin: 0 15em;
+      &-logo {
+        width: 454px;
+        height: 103px;
+      }
+      &-button {
+        width: 297px;
+        height: 55px;
+      }
+    }
+  }
+}

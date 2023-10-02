@@ -42,8 +42,10 @@ a {
 }
 
 .nav {
-  position: fixed;
   position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -98,6 +100,9 @@ a {
   font-weight: bold;
 }
 
+.footer {
+  margin-top: 10em;
+}
 .footer__top {
   display: flex;
   justify-content: center;
@@ -120,7 +125,7 @@ a {
 .footer__top-box {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  max-width: 100%;
   margin: 2em 0;
 }
 .footer__top-box--line {
@@ -130,12 +135,14 @@ a {
   display: flex;
   align-items: center;
   font-size: 3rem;
+  margin: 0 0.1em 0 0;
 }
 .footer__top-icons .fa-brands {
   margin: 0 0.3em;
 }
 .footer__top-addres {
   font-size: 1.2rem;
+  margin: 0 0 0 1em;
 }
 .footer__top-addres p {
   margin: 0.2em 0;
@@ -162,9 +169,6 @@ a {
   transform: translateY(-50%);
   color: #3b4bdc;
 }
-.footer__bottom {
-  width: 100%;
-}
 .footer__bottom-line {
   position: relative;
   text-align: center;
@@ -174,7 +178,7 @@ a {
 }
 .footer__bottom-line::before {
   content: "";
-  width: 110px;
+  min-width: 35%;
   height: 1px;
   background: rgba(128, 128, 128, 0.356);
   left: 0;
@@ -183,7 +187,7 @@ a {
 }
 .footer__bottom-line::after {
   content: "";
-  width: 110px;
+  min-width: 35%;
   height: 1px;
   background: rgba(128, 128, 128, 0.356);
   right: 0;
@@ -199,7 +203,7 @@ a {
 }
 .footer__bottom-line2::before {
   content: "";
-  width: 68px;
+  min-width: 22%;
   height: 1px;
   background: rgba(128, 128, 128, 0.356);
   left: 0;
@@ -208,7 +212,7 @@ a {
 }
 .footer__bottom-line2::after {
   content: "";
-  width: 68px;
+  min-width: 22%;
   height: 1px;
   background: rgba(128, 128, 128, 0.356);
   right: 0;
