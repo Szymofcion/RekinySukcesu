@@ -1,0 +1,60 @@
+@use "./colors";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+//nav
+.nav {
+  position: fixed;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: colors.$main-color;
+  height: 60px;
+  padding: 0 2em;
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: colors.$main-color;
+    font-weight: bold;
+    font-size: 19px;
+    background: colors.$white;
+    width: 115px;
+    height: 40px;
+    border-radius: 3px;
+  }
+  &__burger {
+  }
+  &__items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 80px;
+    font-size: 15px;
+  }
+  &__item {
+    display: none;
+    margin: 0.7em 0;
+    color: colors.$black;
+    font-weight: bold;
+  }
+}
+.show {
+  display: block;
+}
