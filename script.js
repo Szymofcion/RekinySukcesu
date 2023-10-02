@@ -6,6 +6,8 @@ const handleNav = () => {
   console.log("e");
   burgerBtn.classList.toggle("active");
   allNavLink.forEach((item) => {
+    console.log(item);
+
     item.classList.toggle("show");
   });
 };
