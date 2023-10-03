@@ -16,7 +16,7 @@ burgerBtn.addEventListener("click", handleNav);
 const imageBoxes = document.querySelectorAll(".section2__box");
 
 for (let i = 1; i <= 8; i++) {
-  const imageUrl = `../assets/section2/image${i}.png`;
+  const imageUrl = `./assets/section2/image${i}.png`;
 
   imageBoxes[i - 1].style.backgroundImage = `url('${imageUrl}')`;
 }
