@@ -89,7 +89,10 @@
 
 @media (min-width: 992px) {
   .footer {
-    &__top {
+    &__bottom {
+      &-box {
+        width: 75%;
+      }
     }
   }
 }
@@ -97,8 +100,6 @@
 @media (min-width: 1200px) {
   .footer {
     &__top {
-      width: 30%;
-      margin: 0 15em;
       &-logo {
         max-width: 394px;
         max-height: 85px;
@@ -108,16 +109,12 @@
         height: 55px;
       }
     }
-    &__bottom {
-      width: 30%;
-    }
   }
 }
 
 @media (min-width: 1400px) {
   .footer {
     &__top {
-      margin: 0 15em;
       &-logo {
         width: 454px;
         height: 103px;

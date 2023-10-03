@@ -95,17 +95,48 @@ a {
   }
 }
 
+.section2 {
+  margin-top: 10em;
+  &__header {
+    text-transform: uppercase;
+    &-title {
+      font-weight: bold;
+    }
+    &-subtitle {
+      color: colors.$main-color;
+    }
+  }
+  &__container {
+  }
+  &__box {
+    height: 330px;
+    width: 220px;
+    .your-class-name {
+      @for $i from 1 through 8 {
+        &-img#{$i} {
+          background-image: url("../assets/section2/image#{$i}.png");
+          background-position: center;
+          width: 100%;
+          height: 10em;
+        }
+      }
+    }
+    &-descriprtion {
+      text-transform: uppercase;
+      color: colors.$black;
+    }
+  }
+}
+
 //footer
 
 .footer {
-  margin-top: 10em; /// remember ********************************
   &__top {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 4em 0;
-
     &-logo {
       display: flex;
       align-items: center;
