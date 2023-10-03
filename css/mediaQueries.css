@@ -32,6 +32,38 @@
   }
 }
 @media (min-width: 768px) {
+  .section3__box-date {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .section3__box-date h3 {
+    font-size: 2.5rem;
+  }
+  .section3__box-date p {
+    font-size: 1.2rem;
+    margin: 0 0 1.3em 0;
+  }
+  .section3__box-date div {
+    margin: 0 2em;
+  }
+  .section3__box-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section3__box-card div:nth-child(1) {
+    margin: 1em 1em 5em 0em;
+  }
+  .section3__box-card div:nth-child(2) {
+    margin: 1em 1em 5em 1em;
+  }
+  .section3__box-card div:nth-child(3) {
+    margin: 1em 0em 5em 1em;
+  }
+}
+@media (min-width: 768px) {
   .footer {
     display: flex;
     justify-content: center;
