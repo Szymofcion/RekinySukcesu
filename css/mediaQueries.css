@@ -18,12 +18,17 @@
 }
 @media (min-width: 1200px) {
   .wrapper {
-    margin: 0 6em;
+    margin: 10em;
   }
 }
 @media (min-width: 1400px) {
   .wrapper {
-    margin: 0 10em;
+    margin: 0 25em;
+  }
+}
+@media (min-width: 768px) {
+  .section2__box {
+    margin: 1em;
   }
 }
 @media (min-width: 768px) {

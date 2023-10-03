@@ -26,14 +26,46 @@
 
 @media (min-width: 1200px) {
   .wrapper {
-    margin: 0 6em;
+    margin: 10em;
   }
 }
 
 @media (min-width: 1400px) {
   .wrapper {
-    margin: 0 10em;
+    margin: 0 25em;
   }
+}
+
+//section2
+
+@media (min-width: 768px) {
+  .section2 {
+    &__header {
+      &-title {
+      }
+      &-subtitle {
+      }
+    }
+    &__container {
+    
+    }
+    &__box {
+      margin: 1em;
+      &-img {
+      }
+      &-description {
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
 }
 
 //footer

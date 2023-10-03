@@ -12,6 +12,7 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #e9e9e9;
 }
 a {
   text-decoration: none;
@@ -97,33 +98,77 @@ a {
 
 .section2 {
   margin-top: 10em;
+  width: 100%;
+  height: 100%;
   &__header {
     text-transform: uppercase;
     &-title {
       font-weight: bold;
+      font-size: 2.6rem;
     }
     &-subtitle {
       color: colors.$main-color;
+      margin-bottom: 2em;
+      font-size: 1.5rem;
     }
   }
   &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   &__box {
-    height: 330px;
-    width: 220px;
-    .your-class-name {
-      @for $i from 1 through 8 {
-        &-img#{$i} {
-          background-image: url("../assets/section2/image#{$i}.png");
-          background-position: center;
-          width: 100%;
-          height: 10em;
-        }
+    width: 330px;
+    height: 220px;
+    margin: 2em 0;
+    border-radius: 3px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease; /* Dodajemy transition na opacity dla overlaya */
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &-middle {
+      position: absolute;
+      top: 39%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      z-index: 2;
+      color: colors.$white;
+      transition: 0.3s ease;
+      font-size: 1.5rem;
+      span {
+        margin: 0 0 0 0.5em;
       }
     }
-    &-descriprtion {
+    &:hover .section2__box-middle {
+      opacity: 1;
+    }
+    &-description {
+      position: absolute;
+      bottom: 0;
+      padding: 0.9em;
+      font-size: 1.5rem;
+      z-index: 10;
       text-transform: uppercase;
       color: colors.$black;
+      background-color: colors.$white;
     }
   }
 }

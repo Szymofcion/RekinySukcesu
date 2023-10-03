@@ -14,6 +14,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #e9e9e9;
 }
 
 a {
@@ -102,71 +103,77 @@ a {
 
 .section2 {
   margin-top: 10em;
+  width: 100%;
+  height: 100%;
 }
 .section2__header {
   text-transform: uppercase;
 }
 .section2__header-title {
   font-weight: bold;
+  font-size: 2.6rem;
 }
 .section2__header-subtitle {
   color: #3b4bdc;
+  margin-bottom: 2em;
+  font-size: 1.5rem;
+}
+.section2__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .section2__box {
-  height: 330px;
-  width: 220px;
+  width: 330px;
+  height: 220px;
+  margin: 2em 0;
+  border-radius: 3px;
+  position: relative;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
 }
-.section2__box .your-class-name-img1 {
-  background-image: url("../assets/section2/image1.png");
-  background-position: center;
+.section2__box::before {
+  content: "";
+  position: absolute;
   width: 100%;
-  height: 10em;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Dodajemy transition na opacity dla overlaya */
 }
-.section2__box .your-class-name-img2 {
-  background-image: url("../assets/section2/image2.png");
-  background-position: center;
-  width: 100%;
-  height: 10em;
+.section2__box:hover::before {
+  opacity: 1;
 }
-.section2__box .your-class-name-img3 {
-  background-image: url("../assets/section2/image3.png");
-  background-position: center;
-  width: 100%;
-  height: 10em;
+.section2__box-middle {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  z-index: 2;
+  color: #ffffff;
+  transition: 0.3s ease;
+  font-size: 1.5rem;
 }
-.section2__box .your-class-name-img4 {
-  background-image: url("../assets/section2/image4.png");
-  background-position: center;
-  width: 100%;
-  height: 10em;
+.section2__box-middle span {
+  margin: 0 0 0 0.5em;
 }
-.section2__box .your-class-name-img5 {
-  background-image: url("../assets/section2/image5.png");
-  background-position: center;
-  width: 100%;
-  height: 10em;
+.section2__box:hover .section2__box-middle {
+  opacity: 1;
 }
-.section2__box .your-class-name-img6 {
-  background-image: url("../assets/section2/image6.png");
-  background-position: center;
-  width: 100%;
-  height: 10em;
-}
-.section2__box .your-class-name-img7 {
-  background-image: url("../assets/section2/image7.png");
-  background-position: center;
-  width: 100%;
-  height: 10em;
-}
-.section2__box .your-class-name-img8 {
-  background-image: url("../assets/section2/image8.png");
-  background-position: center;
-  width: 100%;
-  height: 10em;
-}
-.section2__box-descriprtion {
+.section2__box-description {
+  position: absolute;
+  bottom: 0;
+  padding: 0.9em;
+  font-size: 1.5rem;
+  z-index: 10;
   text-transform: uppercase;
   color: #1d1d1b;
+  background-color: #ffffff;
 }
 
 .footer__top {
