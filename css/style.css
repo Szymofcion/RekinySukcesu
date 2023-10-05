@@ -104,6 +104,52 @@ a {
 .section1 {
   margin-top: 10em;
 }
+.section1__top {
+  margin-bottom: 1em;
+}
+.section1__top-title {
+  margin-bottom: 1em;
+  font-size: 1.3rem;
+}
+.section1__top-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+.section1__top-list ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.section1__top-list ul li::before {
+  content: "■";
+  color: #3b4bdc;
+  margin-right: 1em;
+}
+.section1__bottom {
+  position: relative;
+}
+.section1__bottom h3 {
+  color: #3b4bdc;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+.section1__bottom p {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin: 1em 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.section1__bottom p img {
+  padding: 0 1rem 0 0;
+}
+.section1__bottom-img {
+  width: 100%;
+}
 
 .section2 {
   margin-top: 10em;
