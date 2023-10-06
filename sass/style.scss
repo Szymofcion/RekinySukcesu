@@ -137,12 +137,15 @@ a {
       display: flex;
       align-items: center;
       font-size: 1.1rem;
-      margin: 1em 0;
+      margin: 2em 0;
       text-transform: uppercase;
       font-weight: bold;
       img {
         padding: 0 1rem 0 0;
       }
+    }
+    p:last-child {
+      margin-bottom: 4em;
     }
     &-img {
       width: 100%;

@@ -140,12 +140,15 @@ a {
   display: flex;
   align-items: center;
   font-size: 1.1rem;
-  margin: 1em 0;
+  margin: 2em 0;
   text-transform: uppercase;
   font-weight: bold;
 }
 .section1__bottom p img {
   padding: 0 1rem 0 0;
+}
+.section1__bottom p:last-child {
+  margin-bottom: 4em;
 }
 .section1__bottom-img {
   width: 100%;

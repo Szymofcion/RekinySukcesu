@@ -36,6 +36,46 @@
   }
 }
 
+//section1
+
+@media (min-width: 768px) {
+  .section1 {
+    &__img {
+      width: 100%;
+    }
+    &__box {
+      display: flex;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    &__header {
+      &-title {
+      }
+      &-subtitle {
+      }
+    }
+    &__container {
+    }
+    &__bottom {
+      &-description {
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
 //section2
 
 @media (min-width: 768px) {

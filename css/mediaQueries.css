@@ -27,6 +27,19 @@
   }
 }
 @media (min-width: 768px) {
+  .section1__img {
+    width: 100%;
+  }
+  .section1__box {
+    display: flex;
+  }
+  .section1__container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
   .section2__box {
     margin: 1em;
   }
