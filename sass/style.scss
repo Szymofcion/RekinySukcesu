@@ -2,9 +2,44 @@
 @import "./mixins";
 
 @font-face {
+  font-family: "source_sans_probold";
+  src: url("../fonts/sourcesanspro-bold-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_problack";
+  src: url("../fonts/sourcesanspro-black-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_prolight";
+  src: url("../fonts/sourcesanspro-light-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "source_sans_proregular";
   src: url("../fonts/sourcesanspro-regular-webfont.woff2") format("woff2"),
     url("../fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_proitalic";
+  src: url("../fonts/sourcesanspro-it-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-it-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_prosemibold";
+  src: url("../fonts/sourcesanspro-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,14 +57,14 @@ html {
 }
 body {
   font-family: "source_sans_proregular", sans-serif;
-  background-color: #e9e9e9;
+  background-color: colors.$white;
 }
 a {
   text-decoration: none;
 }
 .wrapper {
   height: 100%;
-  margin: 0 2em;
+  margin: 0 1em;
 }
 //nav
 .nav__items .show {
@@ -80,7 +115,7 @@ a {
     z-index: 10;
   }
   &__item {
-    @include h5;
+    @include h5Desktop;
     display: none;
     z-index: 1;
     margin: 0.7em 0;
@@ -91,61 +126,83 @@ a {
 ///section 1
 
 .section1 {
-  margin-top: 6em;
-  &__top {
-    margin-bottom: 1em;
+  margin-top: 10em;
+  &__header {
     &-title {
-      margin-bottom: 1em;
-      font-size: 1.3rem;
+      @include h1;
+      margin-right: 0.5em;
+    }
+    &-subtitle {
+      @include subheader;
+      margin-bottom: 0;
+    }
+    &-subtitle::before {
+      content: "\25CF";
+      color: colors.$main-color;
+      margin-right: 0.5em;
+    }
+  }
+  &__top {
+    &-title {
+      @include paragraph;
+      padding-bottom: 0;
     }
     &-list {
-      ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.2rem;
-        li {
-          display: flex;
-          align-items: center;
-          margin-bottom: 1em;
-        }
+      p {
+        @include paragraph;
+        margin: 12px 12px 12px 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
       }
-      ul li::before {
-        content: "\25A0";
-        color: colors.$main-color;
-        margin-right: 1em;
+      p::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 7px;
+        height: 7px;
+        background-color: colors.$main-color;
+        margin-right: 12px;
+        border-radius: 2px;
       }
     }
   }
   &__bottom {
+    margin-top: 2em;
     position: relative;
     h3 {
-      color: colors.$main-color;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      margin-bottom: 2em;
+      @include h2;
     }
     p {
+      @include paragraph;
       display: flex;
       align-items: center;
-      font-size: 1.1rem;
-      margin: 2em 0;
       text-transform: uppercase;
       font-weight: bold;
+      border-radius: 2px;
+      margin: 0.5em 0;
+      padding-right: 15px;
+      background-color: colors.$greyF6;
       img {
-        padding: 0 1rem 0 0;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        margin-left: 15px;
       }
     }
     p:last-child {
-      margin-bottom: 4em;
+      margin-bottom: 2.5em;
     }
   }
   &__image {
     position: relative;
-    height: 50em;
-    background-image: url(../assets/section1/image2.png);
+    height: 20em;
+    background-image: url(../assets/section1/section1-mobile.png);
     background-repeat: no-repeat;
     background-size: contain;
+
     &-button {
       display: none;
     }
@@ -155,19 +212,42 @@ a {
 ///section 2
 
 .section2 {
-  margin-top: 10em;
   width: 100%;
   height: 100%;
+  background-color: colors.$greyF6;
+  padding-bottom: 3em;
+  padding-top: 4em;
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-button {
+      @include buttonPrimary;
+      margin-top: 0.5em;
+    }
+    &-button::after {
+      content: "\276F";
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 15px);
+      transform: translateY(-50%);
+      color: colors.$main-color;
+    }
+  }
   &__header {
-    text-transform: uppercase;
     &-title {
-      font-weight: bold;
-      font-size: 2.6rem;
+      @include h1;
+      margin-right: 1em;
     }
     &-subtitle {
+      @include subheader;
+      margin-bottom: 1.5em;
+    }
+    &-subtitle::before {
+      content: "\25CF";
       color: colors.$main-color;
-      margin-bottom: 2em;
-      font-size: 1.5rem;
+      margin-right: 0.5em;
     }
   }
   &__container {
@@ -178,12 +258,13 @@ a {
   }
   &__box {
     width: 330px;
-    height: 220px;
-    margin: 2em 0;
+    height: 210px;
+    margin: 0.8em 0;
     border-radius: 3px;
     position: relative;
     transition: background-color 0.3s ease;
     overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.089);
     &::before {
       content: "";
       position: absolute;
@@ -220,9 +301,11 @@ a {
     }
     &-description {
       position: absolute;
+      width: 100%;
       bottom: 0;
-      padding: 0.9em;
-      font-size: 1.5rem;
+      @include h4;
+      padding: 1em 3em 1em 1em;
+      margin-bottom: 0;
       z-index: 10;
       text-transform: uppercase;
       color: colors.$black;
@@ -234,6 +317,21 @@ a {
 //section 3
 
 .section3 {
+  padding-top: 3em;
+  &__header {
+    &-title {
+      @include h1;
+      margin-right: 0.5em;
+    }
+    &-subtitle {
+      @include subheader;
+    }
+    &-subtitle::before {
+      content: "\25CF";
+      color: colors.$main-color;
+      margin-right: 0.5em;
+    }
+  }
   &__container {
     position: relative;
     background-image: url(../assets/section3/grafika.png);
@@ -247,7 +345,7 @@ a {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: rgba(35, 16, 202, 0.788);
+      background: #3b4bdccc;
       z-index: 1;
     }
   }
@@ -260,14 +358,20 @@ a {
     padding-top: 4em;
     width: 100%;
     height: 100%;
-    &-date {
+    div {
       z-index: 2;
-      h3 {
-        font-size: 2rem;
+    }
+    &-date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &--number {
+        @include h1;
+        color: colors.$white;
       }
-      p {
-        font-size: 1.5rem;
-        margin: 0 0 1.3em 0;
+      &--description {
+        @include h3;
       }
     }
     &-card {
@@ -276,7 +380,7 @@ a {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         z-index: 2;
         width: 330px;
         height: 140px;
@@ -288,13 +392,18 @@ a {
         z-index: 10;
       }
       div:nth-child(3) {
-        margin-bottom: 5em;
+        margin-bottom: 4em;
       }
       h4 {
-        font-size: 1.6rem;
+        @include h4;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-right: 1em;
       }
       p {
-        font-size: 1rem;
+        @include paragraph;
+        padding-bottom: 0;
+        margin-right: 0.5em;
       }
     }
   }
@@ -327,38 +436,34 @@ a {
       max-width: 100%;
       margin: 2em 0;
       &--line {
-        border: 1px solid rgba(128, 128, 128, 0.281);
+        border: 1px solid rgba(128, 128, 128, 0.137);
       }
     }
     &-icons {
       display: flex;
       align-items: center;
       font-size: 3rem;
-      margin: 0 0.1em 0 0;
+      margin: 0 0.5em 0 0;
       .fa-brands {
         margin: 0 0.3em;
       }
     }
     &-addres {
       font-size: 1.2rem;
-      margin: 0 0 0 1em;
+      margin: 0 0 0 2em;
       p {
-        margin: 0.2em 0;
+        @include paragraph;
+
+        padding: 0;
       }
       &--bold {
+        padding: 0;
         font-weight: bold;
+        @include paragraphBold;
       }
     }
     &-button {
-      position: relative;
-      width: 277px;
-      height: 47px;
-      border-radius: 6px;
-      background-color: colors.$main-color;
-      color: colors.$white;
-      text-transform: uppercase;
-      font-weight: bold;
-      border: 1px solid colors.$main-color;
+      @include buttonPrimary;
     }
     &-button::after {
       content: "\276F";
@@ -375,14 +480,14 @@ a {
       position: relative;
       text-align: center;
       text-transform: uppercase;
-      color: gray;
+      color: colors.$greyD3;
       margin: 1.5em 0;
     }
     &-line::before {
       content: "";
       min-width: 35%;
       height: 1px;
-      background: gray;
+      background: colors.$greyD3;
       left: 0;
       top: 50%;
       position: absolute;
@@ -391,7 +496,7 @@ a {
       content: "";
       min-width: 35%;
       height: 1px;
-      background: gray;
+      background: colors.$greyD3;
       right: 0;
       top: 50%;
       position: absolute;
@@ -400,14 +505,14 @@ a {
       position: relative;
       text-align: center;
       text-transform: uppercase;
-      color: gray;
+      color: colors.$greyD3;
       margin: 5em 0 1.5em 0;
     }
     &-line2::before {
       content: "";
       min-width: 22%;
       height: 1px;
-      background: gray;
+      background: colors.$greyD3;
       left: 0;
       top: 50%;
       position: absolute;
@@ -416,7 +521,7 @@ a {
       content: "";
       min-width: 22%;
       height: 1px;
-      background: gray;
+      background: colors.$greyD3;
       right: 0;
       top: 50%;
       position: absolute;
