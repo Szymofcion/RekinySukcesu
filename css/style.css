@@ -379,7 +379,7 @@ a {
 }
 .section2__box-middle {
   position: absolute;
-  top: 39%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
