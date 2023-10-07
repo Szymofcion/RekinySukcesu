@@ -1,6 +1,12 @@
 @use "./colors";
-
+@import "./mixins";
 //nav + wrapper
+
+@media (min-width: 500px) {
+  .wrapper {
+    margin: 0 5em;
+  }
+}
 
 @media (min-width: 768px) {
   .nav {
@@ -12,6 +18,7 @@
       top: 0;
       position: relative;
       flex-direction: row;
+      align-items: center;
     }
     &__item {
       display: block;
@@ -25,14 +32,11 @@
 }
 
 @media (min-width: 1200px) {
-  .wrapper {
-    margin: 10em;
-  }
 }
 
 @media (min-width: 1400px) {
   .wrapper {
-    margin: 0 25em;
+    margin: 0 15em;
   }
 }
 
@@ -40,20 +44,74 @@
 
 @media (min-width: 768px) {
   .section1 {
+    &__bottom {
+      &-icons {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        p {
+          margin: 0.5em 0.5em;
+        }
+        p:nth-child(1) {
+          width: 45.5%;
+        }
+        p:nth-child(2) {
+          width: 50%;
+        }
+        p:nth-child(3) {
+          width: 99.5%;
+        }
+        p:nth-child(4) {
+          width: 31%;
+        }
+        p:nth-child(5) {
+          width: 31.1%;
+        }
+        p:nth-child(6) {
+          width: 31.5%;
+        }
+        p:nth-child(7) {
+          width: 55%;
+          margin-bottom: 30px;
+        }
+        p:nth-child(8) {
+          width: 40.5%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .section1 {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    &__top {
+      width: 80%;
+    }
+    &__bottom {
+      margin-top: 5em;
+    }
+    &__container {
+      width: 80%;
+    }
     &__image {
       position: relative;
-      width: 35%;
-      height: 80em;
-      background-image: url(../assets/section1/01.png);
-      background-size: cover;
-      background-position: center;
+      position: absolute;
+      top: -5%;
+      right: -70%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      background-image: url(../assets/section1/section1-desktop.png);
       &-button {
         position: absolute;
         display: block;
-        right: 0;
-        top: 25px;
-        width: 277px;
-        height: 47px;
+        top: 10%;
+        left: 7%;
+        width: 200px;
+        height: 45px;
+        font-size: 1rem;
         border-radius: 6px;
         background-color: colors.$main-color;
         color: colors.$white;
@@ -62,56 +120,41 @@
         border: 1px solid colors.$main-color;
       }
     }
-    &__box {
-      display: flex;
-    }
-
-    &__container {
-      display: flex;
-      flex-direction: column;
-      width: 70%;
-      margin: 0 2em;
-    }
-    &__bottom {
-      &-icons {
-        display: flex;
-        flex-wrap: wrap;
-        p:nth-child(1) {
-          width: 50%;
-        }
-        p:nth-child(2) {
-          width: 40%;
-        }
-        p:nth-child(3) {
-          width: 100%;
-        }
-        p:nth-child(4) {
-          width: 30%;
-        }
-        p:nth-child(5) {
-          width: 30%;
-        }
-        p:nth-child(6) {
-          width: 30%;
-        }
-        p:nth-child(7) {
-          width: 50%;
-        }
-        p:nth-child(8) {
-          width: 50%;
-        }
-      }
-    }
   }
-}
-
-@media (min-width: 992px) {
 }
 
 @media (min-width: 1200px) {
 }
 
 @media (min-width: 1400px) {
+  .section1 {
+    &__header {
+      &-title {
+        @include h1Desktop;
+      }
+      &-subtitle {
+        @include subheaderDesktop;
+      }
+    }
+    &__top {
+      &-title {
+        @include paragraphDesktop;
+      }
+      &-list {
+        p {
+          @include paragraphDesktop;
+        }
+      }
+    }
+    &__bottom {
+      h3 {
+        @include h2Desktop;
+      }
+      p {
+        @include paragraphDesktop;
+      }
+    }
+  }
 }
 
 //section2
@@ -143,44 +186,30 @@
 }
 
 @media (min-width: 1400px) {
+  .section2 {
+    &__header {
+      &-title {
+        @include h1Desktop;
+      }
+      &-subtitle {
+        @include subheaderDesktop;
+      }
+    }
+    &__box {
+      width: 330px;
+      height: 330px;
+      background-repeat: no-repeat;
+      &-description {
+        @include h4Desktop;
+      }
+    }
+  }
 }
 
 //section 3
 
 @media (min-width: 768px) {
   .section3 {
-    &__box {
-      &-date {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        h3 {
-          font-size: 2.5rem;
-        }
-        p {
-          font-size: 1.2rem;
-          margin: 0 0 1.3em 0;
-        }
-        div {
-          margin: 0 2em;
-        }
-      }
-      &-card {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        div:nth-child(1) {
-          margin: 1em 1em 5em 0em;
-        }
-        div:nth-child(2) {
-          margin: 1em 1em 5em 1em;
-        }
-        div:nth-child(3) {
-          margin: 1em 0em 5em 1em;
-        }
-      }
-    }
   }
 }
 
@@ -191,6 +220,34 @@
 }
 
 @media (min-width: 1400px) {
+  .section3 {
+    &__header {
+      &-title {
+        @include h1Desktop;
+      }
+      &-subtitle {
+        @include subheaderDesktop;
+      }
+    }
+    &__container {
+      &-date {
+        &--number {
+          @include h1Desktop;
+        }
+        &--description {
+          @include h3Desktop;
+        }
+      }
+      &-card {
+        h4 {
+          @include h4Desktop;
+        }
+        p {
+          @include paragraphDesktop;
+        }
+      }
+    }
+  }
 }
 
 //footer
@@ -279,6 +336,14 @@
       &-button {
         width: 297px;
         height: 55px;
+      }
+      &-addres {
+        p {
+          @include paragraphDesktop;
+        }
+        &--bold {
+          @include paragraphBoldDesktop;
+        }
       }
     }
   }

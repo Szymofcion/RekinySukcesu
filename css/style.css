@@ -116,7 +116,6 @@ a {
 
 .nav {
   position: relative;
-  position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
@@ -180,7 +179,7 @@ a {
 }
 
 .section1 {
-  margin-top: 10em;
+  padding-top: 5em;
 }
 .section1__header-title {
   font-family: "source_sans_problack";
@@ -280,10 +279,12 @@ a {
 }
 .section1__image {
   position: relative;
-  height: 20em;
   background-image: url(../assets/section1/section1-mobile.png);
   background-repeat: no-repeat;
   background-size: contain;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
 }
 .section1__image-button {
   display: none;
@@ -441,7 +442,7 @@ a {
 }
 .section3__container {
   position: relative;
-  background-image: url(../assets/section3/grafika.png);
+  background-image: url(../assets/section3/wearhouse.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
