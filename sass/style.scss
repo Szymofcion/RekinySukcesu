@@ -80,10 +80,10 @@ a {
     z-index: 10;
   }
   &__item {
+    @include h5;
     display: none;
     z-index: 1;
     margin: 0.7em 0;
-    color: colors.$black;
     font-weight: bold;
   }
 }
@@ -375,14 +375,14 @@ a {
       position: relative;
       text-align: center;
       text-transform: uppercase;
-      color: colors.$light-gray;
+      color: gray;
       margin: 1.5em 0;
     }
     &-line::before {
       content: "";
       min-width: 35%;
       height: 1px;
-      background: colors.$light-gray;
+      background: gray;
       left: 0;
       top: 50%;
       position: absolute;
@@ -391,7 +391,7 @@ a {
       content: "";
       min-width: 35%;
       height: 1px;
-      background: colors.$light-gray;
+      background: gray;
       right: 0;
       top: 50%;
       position: absolute;
@@ -400,14 +400,14 @@ a {
       position: relative;
       text-align: center;
       text-transform: uppercase;
-      color: colors.$light-gray;
+      color: gray;
       margin: 5em 0 1.5em 0;
     }
     &-line2::before {
       content: "";
       min-width: 22%;
       height: 1px;
-      background: colors.$light-gray;
+      background: gray;
       left: 0;
       top: 50%;
       position: absolute;
@@ -416,7 +416,7 @@ a {
       content: "";
       min-width: 22%;
       height: 1px;
-      background: colors.$light-gray;
+      background: gray;
       right: 0;
       top: 50%;
       position: absolute;

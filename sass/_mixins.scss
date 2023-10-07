@@ -43,6 +43,8 @@
   font-style: normal;
 }
 
+/// mobile
+
 @mixin burgerBtn {
   position: relative;
   width: 30px;
@@ -56,12 +58,12 @@
   border: none;
 }
 @mixin logo {
+  font-style: "source_sans_probold";
   display: flex;
   justify-content: center;
   align-items: center;
   color: colors.$main-color;
-  font-weight: bold;
-  font-size: 19px;
+  font-size: 16px;
   background: colors.$white;
   width: 115px;
   height: 40px;
@@ -75,7 +77,7 @@
   letter-spacing: 4%;
   margin-bottom: 0;
 }
-@mixin Subheader {
+@mixin subheader {
   font-style: "source_sans_prolight", sans-serif;
   color: colors.$main-color;
   font-size: 15px;
@@ -111,10 +113,11 @@
   line-height: 14px;
   letter-spacing: 2%;
   margin-bottom: 15px;
+  color: colors.$black;
 }
 @mixin paragraph {
   font-style: "source_sans_proregular";
-  font-style: 12px;
+  font-size: 12px;
   line-height: 15px;
   letter-spacing: 4%;
   padding-top: 20px;
@@ -150,6 +153,111 @@
   border: 1px solid colors.$main-color;
 }
 @mixin buttonSecondary {
+  position: relative;
+  width: 257px;
+  height: 47px;
+  border-radius: 6px;
+  background-color: colors.$main-color;
+  color: colors.$white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid colors.$main-color;
+}
+
+/// desktop
+
+@mixin h1Desktop {
+  font-style: "source_sans_problack", sans-serif;
+  color: colors.$black;
+  font-size: 48px;
+  line-height: 67px;
+  letter-spacing: 4%;
+  margin-bottom: 0;
+}
+@mixin subheaderDesktop {
+  font-style: "source_sans_prolight", sans-serif;
+  color: colors.$main-color;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 4%;
+  margin-bottom: 60px;
+}
+@mixin h2Desktop {
+  font-style: "source_sans_probold";
+  color: colors.$main-color;
+  font-size: 26px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  margin-bottom: 40px;
+}
+@mixin h3Desktop {
+  font-style: "source_sans_prosemibold";
+  font-size: 22px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  margin-bottom: 20px;
+}
+@mixin h4Desktop {
+  font-style: "source_sans_prosemibold";
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 4.5%;
+  margin-bottom: 15px;
+}
+@mixin h5Desktop {
+  font-style: "source_sans_prosemibold";
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 2%;
+  margin-bottom: 15px;
+  color: colors.$black;
+}
+@mixin paragraphDesktop {
+  font-style: "source_sans_proregular";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 4%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@mixin paragraphItalicDesktop {
+  font-style: "source_sans_proitalic";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 4%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@mixin paragraphBoldDesktop {
+  font-style: "source_sans_probold";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 4%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@mixin paragraphSmallDesktop {
+  font-style: "source_sans_probold";
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 4%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@mixin buttonPrimaryDesktop {
+  position: relative;
+  width: 257px;
+  height: 47px;
+  border-radius: 6px;
+  background-color: colors.$main-color;
+  color: colors.$white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid colors.$main-color;
+}
+@mixin buttonSecondaryDesktop {
   position: relative;
   width: 257px;
   height: 47px;
