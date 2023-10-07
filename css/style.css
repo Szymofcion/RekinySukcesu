@@ -1,4 +1,46 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "source_sans_probold";
+  src: url("../fonts/sourcesanspro-bold-webfont.woff2") format("woff2"), url("../fonts/sourcesanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_problack";
+  src: url("../fonts/sourcesanspro-black-webfont.woff2") format("woff2"), url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_prolight";
+  src: url("../fonts/sourcesanspro-light-webfont.woff2") format("woff2"), url("../fonts/sourcesanspro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_proregular";
+  src: url("../fonts/sourcesanspro-regular-webfont.woff2") format("woff2"), url("../fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_proitalic";
+  src: url("../fonts/sourcesanspro-it-webfont.woff2") format("woff2"), url("../fonts/sourcesanspro-it-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_prosemibold";
+  src: url("../fonts/sourcesanspro-semibold-webfont.woff2") format("woff2"), url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_proregular";
+  src: url("../fonts/sourcesanspro-regular-webfont.woff2") format("woff2"), url("../fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -13,7 +55,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "source_sans_proregular", sans-serif;
   background-color: #e9e9e9;
 }
 
@@ -102,7 +144,7 @@ a {
 }
 
 .section1 {
-  margin-top: 10em;
+  margin-top: 6em;
 }
 .section1__top {
   margin-bottom: 1em;
@@ -150,8 +192,15 @@ a {
 .section1__bottom p:last-child {
   margin-bottom: 4em;
 }
-.section1__bottom-img {
-  width: 100%;
+.section1__image {
+  position: relative;
+  height: 50em;
+  background-image: url(../assets/section1/image2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.section1__image-button {
+  display: none;
 }
 
 .section2 {
@@ -367,14 +416,14 @@ a {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(128, 128, 128, 0.253);
+  color: #f2f2f2;
   margin: 1.5em 0;
 }
 .footer__bottom-line::before {
   content: "";
   min-width: 35%;
   height: 1px;
-  background: rgba(128, 128, 128, 0.253);
+  background: #f2f2f2;
   left: 0;
   top: 50%;
   position: absolute;
@@ -383,7 +432,7 @@ a {
   content: "";
   min-width: 35%;
   height: 1px;
-  background: rgba(128, 128, 128, 0.253);
+  background: #f2f2f2;
   right: 0;
   top: 50%;
   position: absolute;
@@ -392,14 +441,14 @@ a {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(128, 128, 128, 0.253);
+  color: #f2f2f2;
   margin: 5em 0 1.5em 0;
 }
 .footer__bottom-line2::before {
   content: "";
   min-width: 22%;
   height: 1px;
-  background: rgba(128, 128, 128, 0.253);
+  background: #f2f2f2;
   left: 0;
   top: 50%;
   position: absolute;
@@ -408,7 +457,7 @@ a {
   content: "";
   min-width: 22%;
   height: 1px;
-  background: rgba(128, 128, 128, 0.253);
+  background: #f2f2f2;
   right: 0;
   top: 50%;
   position: absolute;

@@ -1,0 +1,162 @@
+@use "./colors";
+
+@font-face {
+  font-family: "source_sans_probold";
+  src: url("../fonts/sourcesanspro-bold-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_problack";
+  src: url("../fonts/sourcesanspro-black-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_prolight";
+  src: url("../fonts/sourcesanspro-light-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_proregular";
+  src: url("../fonts/sourcesanspro-regular-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_proitalic";
+  src: url("../fonts/sourcesanspro-it-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-it-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_prosemibold";
+  src: url("../fonts/sourcesanspro-semibold-webfont.woff2") format("woff2"),
+    url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin burgerBtn {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+}
+@mixin logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: colors.$main-color;
+  font-weight: bold;
+  font-size: 19px;
+  background: colors.$white;
+  width: 115px;
+  height: 40px;
+  border-radius: 3px;
+}
+@mixin h1 {
+  font-style: "source_sans_problack", sans-serif;
+  color: colors.$black;
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: 4%;
+  margin-bottom: 0;
+}
+@mixin Subheader {
+  font-style: "source_sans_prolight", sans-serif;
+  color: colors.$main-color;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: 4%;
+  margin-bottom: 30px;
+}
+@mixin h2 {
+  font-style: "source_sans_probold";
+  color: colors.$main-color;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 2%;
+  margin-bottom: 15px;
+}
+@mixin h3 {
+  font-style: "source_sans_prosemibold";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2%;
+  margin-bottom: 15px;
+}
+@mixin h4 {
+  font-style: "source_sans_prosemibold";
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 4.5%;
+  margin-bottom: 15px;
+}
+@mixin h5 {
+  font-style: "source_sans_prosemibold";
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: 2%;
+  margin-bottom: 15px;
+}
+@mixin paragraph {
+  font-style: "source_sans_proregular";
+  font-style: 12px;
+  line-height: 15px;
+  letter-spacing: 4%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@mixin paragraphItalic {
+  font-style: "source_sans_proitalic";
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 4%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@mixin paragraphBold {
+  font-style: "source_sans_probold";
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 4%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@mixin buttonPrimary {
+  position: relative;
+  width: 257px;
+  height: 47px;
+  border-radius: 6px;
+  background-color: colors.$main-color;
+  color: colors.$white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid colors.$main-color;
+}
+@mixin buttonSecondary {
+  position: relative;
+  width: 257px;
+  height: 47px;
+  border-radius: 6px;
+  background-color: colors.$main-color;
+  color: colors.$white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid colors.$main-color;
+}

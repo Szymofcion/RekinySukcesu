@@ -40,8 +40,28 @@
 
 @media (min-width: 768px) {
   .section1 {
-    &__img {
-      width: 100%;
+
+    &__image {
+      position: relative;
+      width: 35%;
+      height: 80em;
+      background-image: url(../assets/section1/01.png);
+      background-size: cover; 
+      background-position: center;
+      &-button {
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 25px;
+        width: 277px;
+        height: 47px;
+        border-radius: 6px;
+        background-color: colors.$main-color;
+        color: colors.$white;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: 1px solid colors.$main-color;
+      }
     }
     &__box {
       display: flex;
@@ -50,18 +70,37 @@
     &__container {
       display: flex;
       flex-direction: column;
-      width: 50%;
-    }
-    &__header {
-      &-title {
-      }
-      &-subtitle {
-      }
-    }
-    &__container {
+      width: 70%;
+      margin: 0 2em;
     }
     &__bottom {
-      &-description {
+      &-icons {
+        display: flex;
+        flex-wrap: wrap;
+        p:nth-child(1) {
+          width: 50%;
+        }
+        p:nth-child(2) {
+          width: 40%;
+        }
+        p:nth-child(3) {
+          width: 100%;
+        }
+        p:nth-child(4) {
+          width: 30%;
+        }
+        p:nth-child(5) {
+          width: 30%;
+        }
+        p:nth-child(6) {
+          width: 30%;
+        }
+        p:nth-child(7) {
+          width: 50%;
+        }
+        p:nth-child(8) {
+          width: 50%;
+        }
       }
     }
   }
