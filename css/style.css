@@ -212,9 +212,6 @@ a {
   animation: navItemsAnimation 1s both;
 }
 
-.section1 {
-  padding-bottom: 5em;
-}
 .section1__header-title {
   margin-top: 1em;
   font-family: "source_sans_problack", sans-serif;
@@ -224,7 +221,7 @@ a {
   letter-spacing: 4%;
   margin-bottom: 0;
   text-transform: uppercase;
-  margin-right: 0.5em;
+  margin-right: 1em;
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeInUp 1s forwards;
@@ -287,7 +284,7 @@ a {
   margin-top: 2em;
   position: relative;
 }
-.section1__bottom h3 {
+.section1__bottom h2 {
   font-family: "source_sans_probold", sans-serif;
   color: #3b4bdc;
   font-size: 18px;
@@ -373,7 +370,7 @@ a {
   font-weight: bold;
   border: 1px solid #3b4bdc;
   transition: 0.3s;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
 }
 .section2__bottom-button::after {
   content: "❯";
@@ -491,7 +488,7 @@ a {
   letter-spacing: 4%;
   margin-bottom: 0;
   text-transform: uppercase;
-  margin-right: 0.5em;
+  margin-right: 1em;
 }
 .section3__header-subtitle {
   font-family: "source_sans_prolight", sans-serif;

@@ -64,6 +64,13 @@
     border-bottom: 2px solid #ffffff;
   }
 }
+@media (min-width: 1200px) {
+  .nav__logo {
+    width: 178px;
+    height: 61px;
+    font-size: 3.3rem;
+  }
+}
 @media (min-width: 1400px) {
   .wrapper {
     margin: 0 12em;
@@ -72,10 +79,18 @@
     padding: 0 0 0 12em;
   }
 }
+@media (min-width: 1800px) {
+  .wrapper {
+    margin: 0 20em;
+  }
+  .nav {
+    padding: 0 1em 0 20em;
+  }
+}
 @media (min-width: 768px) {
   .section1__bottom-icons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   .section1__bottom-icons p {
     margin: 0.6em 0.6em;
@@ -85,13 +100,13 @@
     height: 60px;
   }
   .section1__bottom-icons .medium {
-    grid-column: span 3;
+    grid-column: span 6;
   }
   .section1__bottom-icons .wide {
-    grid-column: span 2;
+    grid-column: span 3;
   }
   .section1__bottom-icons .narrow {
-    grid-column: span 1;
+    grid-column: span 2;
   }
   .section1__bottom-icons p:nth-child(8) {
     margin-bottom: 0.6em;
@@ -114,6 +129,9 @@
   }
 }
 @media (min-width: 1200px) {
+  .section1 {
+    padding-bottom: 5em;
+  }
   .section1__image {
     position: absolute;
     top: 0;
@@ -200,7 +218,7 @@
   .section1__container {
     width: 70%;
   }
-  .section1__bottom h3 {
+  .section1__bottom h2 {
     font-family: "source_sans_probold", sans-serif;
     color: #3b4bdc;
     font-size: 26px;
@@ -218,8 +236,16 @@
   }
 }
 @media (min-width: 758px) {
+  .section2__header {
+    padding-top: 2em;
+  }
   .section2__box {
     margin: 0.5em 0.5em;
+  }
+}
+@media (min-width: 992px) {
+  .section2__box {
+    margin: 1em;
   }
 }
 @media (min-width: 1200px) {
@@ -266,6 +292,9 @@
   }
 }
 @media (min-width: 768px) {
+  .section3__header {
+    padding-top: 2em;
+  }
   .section3__box-card {
     display: flex;
     justify-content: center;

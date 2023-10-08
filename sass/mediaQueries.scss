@@ -39,6 +39,13 @@
 }
 
 @media (min-width: 1200px) {
+  .nav {
+    &__logo {
+      width: 178px;
+      height: 61px;
+      font-size: 3.3rem;
+    }
+  }
 }
 
 @media (min-width: 1400px) {
@@ -50,6 +57,12 @@
   }
 }
 @media (min-width: 1800px) {
+  .wrapper {
+    margin: 0 20em;
+  }
+  .nav {
+    padding: 0 1em 0 20em;
+  }
 }
 
 //section1
@@ -59,7 +72,7 @@
     &__bottom {
       &-icons {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         p {
           margin: 0.6em 0.6em;
           img {
@@ -68,14 +81,14 @@
           }
         }
         .medium {
-          grid-column: span 3;
+          grid-column: span 6;
         }
         .wide {
-          grid-column: span 2;
+          grid-column: span 3;
         }
 
         .narrow {
-          grid-column: span 1;
+          grid-column: span 2;
         }
         p:nth-child(8) {
           margin-bottom: 0.6em;
@@ -104,6 +117,7 @@
 
 @media (min-width: 1200px) {
   .section1 {
+    padding-bottom: 5em;
     &__image {
       position: absolute;
       top: 0;
@@ -179,7 +193,7 @@
       width: 70%;
     }
     &__bottom {
-      h3 {
+      h2 {
         @include h2Desktop;
       }
       p {
@@ -193,6 +207,9 @@
 
 @media (min-width: 758px) {
   .section2 {
+    &__header {
+      padding-top: 2em;
+    }
     &__box {
       margin: 0.5em 0.5em;
     }
@@ -200,6 +217,11 @@
 }
 
 @media (min-width: 992px) {
+  .section2 {
+    &__box {
+      margin: 1em;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
@@ -243,6 +265,9 @@
 
 @media (min-width: 768px) {
   .section3 {
+    &__header {
+      padding-top: 2em;
+    }
     &__box {
       &-card {
         display: flex;
