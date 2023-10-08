@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollPos = window.scrollY;
 
     if (scrollPos > 50 && !isNavbarFixed) {
-      navbar.classList.add("fixed"); // Dodaj klasę fixed, gdy użytkownik zjedzie trochę niżej
+      navbar.classList.add("fixed");
       isNavbarFixed = true;
     } else if (scrollPos <= 50 && isNavbarFixed) {
-      navbar.classList.remove("fixed"); // Usuń klasę fixed, gdy użytkownik wjedzie na samą górę strony
+      navbar.classList.remove("fixed");
       isNavbarFixed = false;
     }
   };
@@ -82,6 +82,21 @@ for (let i = 1; i <= 8; i++) {
   imageBoxes[i - 1].style.backgroundImage = `url('${imageUrl}')`;
 }
 
+/// animation section 2
+
+const section2 = document.querySelector(".section2");
+
+window.addEventListener("scroll", () => {
+  const section2Top = section2.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (section2Top < windowHeight * 0.8) {
+    section2.classList.add("visible");
+  }
+});
+
+// animate counting number section 3
+
 const startCounters = () => {
   const counters = document.querySelectorAll(".count");
 
@@ -123,15 +138,3 @@ const handleScroll = () => {
 };
 
 window.addEventListener("scroll", handleScroll);
-
-/// animation section 2
-const section2 = document.querySelector(".section2");
-
-window.addEventListener("scroll", () => {
-  const section2Top = section2.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-
-  if (section2Top < windowHeight * 0.8) {
-    section2.classList.add("visible");
-  }
-});

@@ -380,14 +380,14 @@
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    color: #D3D3D3;
+    color: #d3d3d3;
     margin: 1.5em 0;
   }
   .footer__bottom-line::before {
     content: "";
     min-width: 35%;
     height: 1px;
-    background: #D3D3D3;
+    background: #d3d3d3;
     left: 0;
     top: 50%;
     position: absolute;
@@ -396,7 +396,7 @@
     content: "";
     min-width: 35%;
     height: 1px;
-    background: #D3D3D3;
+    background: #d3d3d3;
     right: 0;
     top: 50%;
     position: absolute;

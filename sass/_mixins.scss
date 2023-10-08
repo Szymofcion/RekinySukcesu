@@ -71,7 +71,7 @@
   font-weight: bold;
 }
 @mixin h1 {
-  font-family: "source_sans_problack" , sans-serif;;
+  font-family: "source_sans_problack", sans-serif;
   color: colors.$black;
   font-size: 28px;
   line-height: 35px;
@@ -89,7 +89,7 @@
   text-transform: uppercase;
 }
 @mixin h2 {
-  font-family: "source_sans_probold" , sans-serif;;
+  font-family: "source_sans_probold", sans-serif;
   color: colors.$main-color;
   font-size: 18px;
   line-height: 16px;
@@ -98,7 +98,7 @@
   text-transform: uppercase;
 }
 @mixin h3 {
-  font-family: "source_sans_prosemibold", sans-serif;;
+  font-family: "source_sans_prosemibold", sans-serif;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 2%;
@@ -106,14 +106,14 @@
   text-transform: uppercase;
 }
 @mixin h4 {
-  font-family: "source_sans_prosemibold", sans-serif;;
+  font-family: "source_sans_prosemibold", sans-serif;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 4.5%;
   margin-bottom: 15px;
 }
 @mixin h5 {
-  font-family: "source_sans_prosemibold", sans-serif;;
+  font-family: "source_sans_prosemibold", sans-serif;
   font-size: 11px;
   line-height: 14px;
   letter-spacing: 2%;
@@ -121,7 +121,7 @@
   color: colors.$black;
 }
 @mixin paragraph {
-  font-family: "source_sans_proregular", sans-serif;;
+  font-family: "source_sans_proregular", sans-serif;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 4%;
@@ -129,7 +129,7 @@
   padding-bottom: 20px;
 }
 @mixin paragraphItalic {
-  font-family: "source_sans_proitalic", sans-serif;;
+  font-family: "source_sans_proitalic", sans-serif;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 4%;
@@ -138,7 +138,7 @@
 }
 
 @mixin paragraphBold {
-  font-family: "source_sans_probold", sans-serif;;
+  font-family: "source_sans_probold", sans-serif;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 4%;
@@ -191,7 +191,7 @@
   margin-bottom: 60px;
 }
 @mixin h2Desktop {
-  font-family: "source_sans_probold", sans-serif;;
+  font-family: "source_sans_probold", sans-serif;
   color: colors.$main-color;
   font-size: 26px;
   line-height: 24px;
@@ -199,21 +199,21 @@
   margin-bottom: 40px;
 }
 @mixin h3Desktop {
-  font-family: "source_sans_prosemibold", sans-serif;;
+  font-family: "source_sans_prosemibold", sans-serif;
   font-size: 22px;
   line-height: 24px;
   letter-spacing: 2%;
   margin-bottom: 20px;
 }
 @mixin h4Desktop {
-  font-family: "source_sans_prosemibold", sans-serif;;
+  font-family: "source_sans_prosemibold", sans-serif;
   font-size: 18px;
   line-height: 23px;
   letter-spacing: 4.5%;
   margin-bottom: 15px;
 }
 @mixin h5Desktop {
-  font-family: "source_sans_prosemibold", sans-serif;;
+  font-family: "source_sans_prosemibold", sans-serif;
   font-size: 15px;
   line-height: 19px;
   letter-spacing: 2%;
@@ -221,7 +221,7 @@
   color: colors.$black;
 }
 @mixin paragraphDesktop {
-  font-family: "source_sans_proregular", sans-serif;;
+  font-family: "source_sans_proregular", sans-serif;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 4%;
@@ -229,7 +229,7 @@
   padding-bottom: 20px;
 }
 @mixin paragraphItalicDesktop {
-  font-family: "source_sans_proitalic", sans-serif;;
+  font-family: "source_sans_proitalic", sans-serif;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 4%;
@@ -238,7 +238,7 @@
 }
 
 @mixin paragraphBoldDesktop {
-  font-family: "source_sans_probold", sans-serif;;
+  font-family: "source_sans_probold", sans-serif;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 4%;
@@ -246,7 +246,7 @@
   padding-bottom: 20px;
 }
 @mixin paragraphSmallDesktop {
-  font-family: "source_sans_probold", sans-serif;;
+  font-family: "source_sans_probold", sans-serif;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 4%;
