@@ -392,7 +392,8 @@ a {
   &__header {
     &-title {
       @include h1;
-      margin-right: 1em;
+      margin-right: 1
+      em;
     }
     &-subtitle {
       @include subheader;

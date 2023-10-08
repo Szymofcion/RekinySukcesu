@@ -488,7 +488,7 @@ a {
   letter-spacing: 4%;
   margin-bottom: 0;
   text-transform: uppercase;
-  margin-right: 1em;
+  margin-right: 1 em;
 }
 .section3__header-subtitle {
   font-family: "source_sans_prolight", sans-serif;
