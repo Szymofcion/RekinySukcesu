@@ -147,6 +147,7 @@
 }
 
 @mixin buttonPrimary {
+  cursor: pointer;
   position: relative;
   width: 257px;
   height: 47px;
@@ -156,17 +157,19 @@
   text-transform: uppercase;
   font-weight: bold;
   border: 1px solid colors.$main-color;
+  transition: 0.3s;
 }
 @mixin buttonSecondary {
+  cursor: pointer;
   position: relative;
-  width: 257px;
+  width: 251px;
   height: 47px;
   border-radius: 6px;
-  background-color: colors.$main-color;
-  color: colors.$white;
+  background-color: rgba(255, 255, 255, 0);
+  color: colors.$black;
   text-transform: uppercase;
   font-weight: bold;
-  border: 1px solid colors.$main-color;
+  border: 1px solid colors.$greyD3;
 }
 
 /// desktop
@@ -252,6 +255,7 @@
 }
 
 @mixin buttonPrimaryDesktop {
+  cursor: pointer;
   position: relative;
   width: 257px;
   height: 47px;
@@ -263,6 +267,7 @@
   border: 1px solid colors.$main-color;
 }
 @mixin buttonSecondaryDesktop {
+  cursor: pointer;
   position: relative;
   width: 257px;
   height: 47px;

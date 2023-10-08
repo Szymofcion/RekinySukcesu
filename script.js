@@ -20,7 +20,7 @@ const handleNavItemsAnimation = () => {
   });
 };
 
-handleNavItemsAnimation ()
+handleNavItemsAnimation();
 burgerBtn.addEventListener("click", handleNav);
 
 /// add position fixed on nav when user scroll down
@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const handleScroll = () => {
     const scrollPos = window.scrollY;
 
-    if (scrollPos > 100 && !isNavbarFixed) {
+    if (scrollPos > 50 && !isNavbarFixed) {
       navbar.classList.add("fixed"); // Dodaj klasę fixed, gdy użytkownik zjedzie trochę niżej
       isNavbarFixed = true;
-    } else if (scrollPos <= 100 && isNavbarFixed) {
+    } else if (scrollPos <= 50 && isNavbarFixed) {
       navbar.classList.remove("fixed"); // Usuń klasę fixed, gdy użytkownik wjedzie na samą górę strony
       isNavbarFixed = false;
     }
@@ -81,3 +81,57 @@ for (let i = 1; i <= 8; i++) {
 
   imageBoxes[i - 1].style.backgroundImage = `url('${imageUrl}')`;
 }
+
+const startCounters = () => {
+  const counters = document.querySelectorAll(".count");
+
+  counters.forEach((counter) => {
+    const targetCount = +counter.getAttribute("data-count");
+    let currentCount = 0;
+    const increment = targetCount / 170;
+
+    const updateCount = () => {
+      if (currentCount < targetCount) {
+        currentCount += increment;
+        counter.innerText = Math.ceil(currentCount);
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = targetCount;
+      }
+    };
+
+    updateCount();
+  });
+};
+
+const checkVisible = (element) => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const handleScroll = () => {
+  const counters = document.querySelectorAll(".count");
+
+  counters.forEach((counter) => {
+    if (checkVisible(counter) && counter.innerText === "0") {
+      startCounters();
+    }
+  });
+};
+
+window.addEventListener("scroll", handleScroll);
+
+/// animation section 2
+const section2 = document.querySelector(".section2");
+
+window.addEventListener("scroll", () => {
+  const section2Top = section2.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (section2Top < windowHeight * 0.8) {
+    section2.classList.add("visible");
+  }
+});

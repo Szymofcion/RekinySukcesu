@@ -38,11 +38,11 @@
   .wrapper {
     margin: 0 5em;
   }
+  .nav {
+    padding: 0 5em;
+  }
 }
 @media (min-width: 768px) {
-  .nav {
-    justify-content: space-around;
-  }
   .nav__burger {
     display: none;
   }
@@ -57,45 +57,37 @@
     color: #ffffff;
     margin: 0 1.5em;
   }
+  .nav__item::after, .nav__item::before {
+    border-bottom: 2px solid #ffffff;
+  }
 }
 @media (min-width: 1400px) {
   .wrapper {
-    margin: 0 15em;
+    margin: 0 12em;
+  }
+  .nav {
+    padding: 0 0 0 12em;
   }
 }
 @media (min-width: 768px) {
   .section1__bottom-icons {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .section1__bottom-icons p {
-    margin: 0.5em 0.5em;
+    margin: 0.6em 0.6em;
   }
-  .section1__bottom-icons p:nth-child(1) {
-    width: 45.5%;
+  .section1__bottom-icons .medium {
+    grid-column: span 3;
   }
-  .section1__bottom-icons p:nth-child(2) {
-    width: 50%;
+  .section1__bottom-icons .wide {
+    grid-column: span 2;
   }
-  .section1__bottom-icons p:nth-child(3) {
-    width: 99.5%;
-  }
-  .section1__bottom-icons p:nth-child(4) {
-    width: 31%;
-  }
-  .section1__bottom-icons p:nth-child(5) {
-    width: 31.1%;
-  }
-  .section1__bottom-icons p:nth-child(6) {
-    width: 31.5%;
-  }
-  .section1__bottom-icons p:nth-child(7) {
-    width: 55%;
-    margin-bottom: 30px;
+  .section1__bottom-icons .narrow {
+    grid-column: span 1;
   }
   .section1__bottom-icons p:nth-child(8) {
-    width: 40.5%;
+    margin-bottom: 0.6em;
   }
 }
 @media (min-width: 900px) {
@@ -113,32 +105,53 @@
   .section1__container {
     width: 80%;
   }
+}
+@media (min-width: 1200px) {
   .section1__image {
-    position: relative;
     position: absolute;
-    top: -5%;
-    right: -70%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    top: 0;
+    right: -10%;
+    width: 50%;
+    height: 100%;
     background-image: url(../assets/section1/section1-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .section1__image-button {
-    position: absolute;
+    position: fixed;
     display: block;
     top: 10%;
-    left: 7%;
-    width: 200px;
-    height: 45px;
-    font-size: 1rem;
+    right: 2%;
+    width: 297px;
+    height: 55px;
+    font-size: 1.4rem;
     border-radius: 6px;
     background-color: #3b4bdc;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
     border: 1px solid #3b4bdc;
+    transition: 0.3s;
+    z-index: 15;
+  }
+  .section1__image-button:hover {
+    background-color: #2334ca;
+  }
+  .section1__container {
+    width: 65%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
+  .section1__image {
+    right: -7%;
+    width: 40%;
+  }
+}
+@media (min-width: 1800px) {
+  .section1__image {
+    right: -5%;
+    width: 40%;
+  }
   .section1__header-title {
     font-family: "source_sans_problack", sans-serif;
     color: #1d1d1b;
@@ -177,7 +190,7 @@
     padding: 0;
   }
   .section1__container {
-    width: 60%;
+    width: 70%;
   }
   .section1__bottom h3 {
     font-family: "source_sans_probold", sans-serif;
@@ -237,7 +250,7 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Dodajemy transition na opacity dla overlaya */
+    transition: opacity 0.3s ease;
   }
   .section2__box-description {
     font-family: "source_sans_prosemibold", sans-serif;
@@ -245,6 +258,7 @@
     line-height: 23px;
     letter-spacing: 4.5%;
     margin-bottom: 15px;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 768px) {
@@ -256,10 +270,10 @@
     margin-bottom: 2em;
   }
   .section3__box-card div {
-    margin: 0.5em 0.5em;
+    margin: 1em;
   }
   .section3__box-card div:nth-child(3) {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 @media (min-width: 1120px) {
@@ -273,6 +287,9 @@
   }
 }
 @media (min-width: 1400px) {
+  .section3__container {
+    padding: 5em 0;
+  }
   .section3__header-title {
     font-family: "source_sans_problack", sans-serif;
     color: #1d1d1b;
@@ -305,8 +322,16 @@
     letter-spacing: 2%;
     margin-bottom: 20px;
   }
+  .section3__box-card div {
+    width: 450px;
+    height: 210px;
+    margin: 2em;
+  }
+  .section3__box-card div:nth-child(3) {
+    margin-bottom: 2em;
+  }
   .section3__box-card h4 {
-    color: #ffffff;
+    color: #1d1d1b;
     font-family: "source_sans_prosemibold", sans-serif;
     font-size: 18px;
     line-height: 23px;

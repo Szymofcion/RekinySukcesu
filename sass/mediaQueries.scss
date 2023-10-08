@@ -6,11 +6,13 @@
   .wrapper {
     margin: 0 5em;
   }
+  .nav {
+    padding: 0 5em;
+  }
 }
 
 @media (min-width: 768px) {
   .nav {
-    justify-content: space-around;
     &__burger {
       display: none;
     }
@@ -25,6 +27,10 @@
       color: colors.$white;
       margin: 0 1.5em;
     }
+    &__item::after,
+    &__item::before {
+      border-bottom: 2px solid colors.$white;
+    }
   }
 }
 
@@ -36,8 +42,13 @@
 
 @media (min-width: 1400px) {
   .wrapper {
-    margin: 0 15em;
+    margin: 0 12em;
   }
+  .nav {
+    padding: 0 0 0 12em;
+  }
+}
+@media (min-width: 1800px) {
 }
 
 //section1
@@ -46,36 +57,23 @@
   .section1 {
     &__bottom {
       &-icons {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         p {
-          margin: 0.5em 0.5em;
+          margin: 0.6em 0.6em;
         }
-        p:nth-child(1) {
-          width: 45.5%;
+        .medium {
+          grid-column: span 3;
         }
-        p:nth-child(2) {
-          width: 50%;
+        .wide {
+          grid-column: span 2;
         }
-        p:nth-child(3) {
-          width: 99.5%;
-        }
-        p:nth-child(4) {
-          width: 31%;
-        }
-        p:nth-child(5) {
-          width: 31.1%;
-        }
-        p:nth-child(6) {
-          width: 31.5%;
-        }
-        p:nth-child(7) {
-          width: 55%;
-          margin-bottom: 30px;
+
+        .narrow {
+          grid-column: span 1;
         }
         p:nth-child(8) {
-          width: 40.5%;
+          margin-bottom: 0.6em;
         }
       }
     }
@@ -96,38 +94,60 @@
     &__container {
       width: 80%;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .section1 {
     &__image {
-      position: relative;
       position: absolute;
-      top: -5%;
-      right: -70%;
-      overflow-x: hidden;
-      overflow-y: hidden;
+      top: 0;
+      right: -10%;
+      width: 50%;
+      height: 100%;
       background-image: url(../assets/section1/section1-desktop.png);
+      background-size: contain;
+      background-repeat: no-repeat;
       &-button {
-        position: absolute;
+        position: fixed;
         display: block;
         top: 10%;
-        left: 7%;
-        width: 200px;
-        height: 45px;
-        font-size: 1rem;
+        right: 2%;
+        width: 297px;
+        height: 55px;
+        font-size: 1.4rem;
         border-radius: 6px;
         background-color: colors.$main-color;
         color: colors.$white;
         text-transform: uppercase;
         font-weight: bold;
         border: 1px solid colors.$main-color;
+        transition: 0.3s;
+        z-index: 15;
       }
+      &-button:hover {
+        background-color: colors.$main-color-dark;
+      }
+    }
+    &__container {
+      width: 65%;
     }
   }
 }
-
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .section1 {
+    &__image {
+      right: -7%;
+      width: 40%;
+    }
+  }
+}
+@media (min-width: 1800px) {
+  .section1 {
+    &__image {
+      right: -5%;
+      width: 40%;
+    }
     &__header {
       &-title {
         @include h1Desktop;
@@ -150,7 +170,7 @@
       }
     }
     &__container {
-      width: 60%;
+      width: 70%;
     }
     &__bottom {
       h3 {
@@ -207,10 +227,11 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
         opacity: 0;
-        transition: opacity 0.3s ease; /* Dodajemy transition na opacity dla overlaya */
+        transition: opacity 0.3s ease;
       }
       &-description {
         @include h4Desktop;
+        margin-bottom: 0;
       }
     }
   }
@@ -228,10 +249,10 @@
         flex-wrap: wrap;
         margin-bottom: 2em;
         div {
-          margin: 0.5em 0.5em;
+          margin: 1em;
         }
         div:nth-child(3) {
-          margin-bottom: 0.5em;
+          margin-bottom: 1em;
         }
       }
     }
@@ -245,7 +266,7 @@
   .section3 {
     &__box {
       width: 100%;
-       &-main {
+      &-main {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
@@ -256,6 +277,9 @@
 
 @media (min-width: 1400px) {
   .section3 {
+    &__container {
+      padding: 5em 0;
+    }
     &__header {
       &-title {
         @include h1Desktop;
@@ -275,8 +299,16 @@
         }
       }
       &-card {
+        div {
+          width: 450px;
+          height: 210px;
+          margin: 2em;
+        }
+        div:nth-child(3) {
+          margin-bottom: 2em;
+        }
         h4 {
-          color: colors.$white;
+          color: colors.$black;
           @include h4Desktop;
         }
         p {
