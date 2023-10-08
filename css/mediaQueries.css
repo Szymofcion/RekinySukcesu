@@ -159,7 +159,7 @@
     width: 60%;
   }
   .section1__top-title {
-    font-family: "source_sans_proregular";
+    font-family: "source_sans_proregular", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 4%;
@@ -168,7 +168,7 @@
     padding: 0;
   }
   .section1__top-list p {
-    font-family: "source_sans_proregular";
+    font-family: "source_sans_proregular", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 4%;
@@ -180,7 +180,7 @@
     width: 60%;
   }
   .section1__bottom h3 {
-    font-family: "source_sans_probold";
+    font-family: "source_sans_probold", sans-serif;
     color: #3b4bdc;
     font-size: 26px;
     line-height: 24px;
@@ -188,7 +188,7 @@
     margin-bottom: 40px;
   }
   .section1__bottom p {
-    font-family: "source_sans_proregular";
+    font-family: "source_sans_proregular", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 4%;
@@ -240,7 +240,7 @@
     transition: opacity 0.3s ease; /* Dodajemy transition na opacity dla overlaya */
   }
   .section2__box-description {
-    font-family: "source_sans_prosemibold";
+    font-family: "source_sans_prosemibold", sans-serif;
     font-size: 18px;
     line-height: 23px;
     letter-spacing: 4.5%;
@@ -299,7 +299,7 @@
     color: #ffffff;
   }
   .section3__box-date--description {
-    font-family: "source_sans_prosemibold";
+    font-family: "source_sans_prosemibold", sans-serif;
     font-size: 22px;
     line-height: 24px;
     letter-spacing: 2%;
@@ -307,14 +307,14 @@
   }
   .section3__box-card h4 {
     color: #ffffff;
-    font-family: "source_sans_prosemibold";
+    font-family: "source_sans_prosemibold", sans-serif;
     font-size: 18px;
     line-height: 23px;
     letter-spacing: 4.5%;
     margin-bottom: 15px;
   }
   .section3__box-card p {
-    font-family: "source_sans_proregular";
+    font-family: "source_sans_proregular", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 4%;
@@ -397,7 +397,7 @@
     height: 55px;
   }
   .footer__top-addres p {
-    font-family: "source_sans_proregular";
+    font-family: "source_sans_proregular", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 4%;
@@ -406,7 +406,7 @@
     padding: 0;
   }
   .footer__top-addres--bold {
-    font-family: "source_sans_probold";
+    font-family: "source_sans_probold", sans-serif;
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 4%;
