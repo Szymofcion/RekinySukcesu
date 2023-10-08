@@ -419,6 +419,7 @@ a {
   flex-wrap: wrap;
 }
 .section2__box {
+  cursor: pointer;
   width: 330px;
   height: 210px;
   margin: 0.8em 0;
