@@ -444,8 +444,10 @@ a {
 }
 .section2__box-middle {
   position: absolute;
+  width: 20px;
+  height: 20px;
   top: 35%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -641,6 +643,7 @@ a {
   margin: 0 0.3em;
 }
 .footer__top-addres {
+  position: relative;
   font-size: 1.2rem;
   margin: 0 0 0 2em;
 }
@@ -662,6 +665,16 @@ a {
   letter-spacing: 4%;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.footer__top-addres::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: #d3d3d3;
 }
 .footer__top-button {
   cursor: pointer;

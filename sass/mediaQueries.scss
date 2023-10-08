@@ -230,10 +230,7 @@
         position: absolute;
         width: 100%;
         height: 90%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+
       }
       &-description {
         @include h4Desktop;
@@ -344,33 +341,18 @@
       &-addres {
         margin: 0 0 0 3em;
       }
+      &-addres::after {
+        left: -25%;
+      }
     }
     &__bottom {
       width: 40%;
-      &-line {
-        position: relative;
-        text-align: center;
-        text-transform: uppercase;
-        color: colors.$greyD3;
-        margin: 1.5em 0;
-      }
+     
       &-line::before {
-        content: "";
         min-width: 35%;
-        height: 1px;
-        background: colors.$greyD3;
-        left: 0;
-        top: 50%;
-        position: absolute;
       }
       &-line::after {
-        content: "";
         min-width: 35%;
-        height: 1px;
-        background: colors.$greyD3;
-        right: 0;
-        top: 50%;
-        position: absolute;
       }
     }
   }
@@ -421,6 +403,9 @@
         &--bold {
           @include paragraphBoldDesktop;
         }
+      }
+      &-addres::after {
+        left: -20%;
       }
     }
     &__bottom {
