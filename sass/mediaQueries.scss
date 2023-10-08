@@ -13,6 +13,7 @@
 
 @media (min-width: 768px) {
   .nav {
+    height: 82px;
     &__burger {
       display: none;
     }
@@ -61,6 +62,10 @@
         grid-template-columns: 1fr 1fr 1fr;
         p {
           margin: 0.6em 0.6em;
+          img {
+            width: 60px;
+            height: 60px;
+          }
         }
         .medium {
           grid-column: span 3;
@@ -109,10 +114,11 @@
       background-size: contain;
       background-repeat: no-repeat;
       &-button {
+        cursor: pointer;
         position: fixed;
         display: block;
-        top: 10%;
-        right: 2%;
+        top: 12%;
+        right: 1%;
         width: 297px;
         height: 55px;
         font-size: 1.4rem;
@@ -415,6 +421,31 @@
         &--bold {
           @include paragraphBoldDesktop;
         }
+      }
+    }
+    &__bottom {
+      &-line::before {
+        min-width: 38%;
+      }
+      &-line {
+        margin-bottom: 1.5em;
+      }
+      &-line::after {
+        min-width: 38%;
+      }
+      &-line2 {
+        margin-bottom: 1.5em;
+      }
+      &-line2::before {
+        min-width: 28%;
+      }
+      &-line2::after {
+        min-width: 28%;
+      }
+      p {
+        @include paragraphDesktop;
+        font-size: 1.3rem;
+        padding: 0.2em 0;
       }
     }
   }

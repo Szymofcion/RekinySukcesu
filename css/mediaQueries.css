@@ -43,6 +43,9 @@
   }
 }
 @media (min-width: 768px) {
+  .nav {
+    height: 82px;
+  }
   .nav__burger {
     display: none;
   }
@@ -76,6 +79,10 @@
   }
   .section1__bottom-icons p {
     margin: 0.6em 0.6em;
+  }
+  .section1__bottom-icons p img {
+    width: 60px;
+    height: 60px;
   }
   .section1__bottom-icons .medium {
     grid-column: span 3;
@@ -118,10 +125,11 @@
     background-repeat: no-repeat;
   }
   .section1__image-button {
+    cursor: pointer;
     position: fixed;
     display: block;
-    top: 10%;
-    right: 2%;
+    top: 12%;
+    right: 1%;
     width: 297px;
     height: 55px;
     font-size: 1.4rem;
@@ -437,5 +445,33 @@
     letter-spacing: 4%;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .footer__bottom-line::before {
+    min-width: 38%;
+  }
+  .footer__bottom-line {
+    margin-bottom: 1.5em;
+  }
+  .footer__bottom-line::after {
+    min-width: 38%;
+  }
+  .footer__bottom-line2 {
+    margin-bottom: 1.5em;
+  }
+  .footer__bottom-line2::before {
+    min-width: 28%;
+  }
+  .footer__bottom-line2::after {
+    min-width: 28%;
+  }
+  .footer__bottom p {
+    font-family: "source_sans_proregular", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 4%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.3rem;
+    padding: 0.2em 0;
   }
 }/*# sourceMappingURL=mediaQueries.css.map */
